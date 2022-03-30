@@ -1,0 +1,72 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 45px;
+    width: 100%;
+}
+.main_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+.MuiSvgIcon-root:nth-child(1){
+    color: red;
+}
+.MuiSvgIcon-root{
+ transform: rotate(45deg);
+}
+.top_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top_text h3{
+    font-size: 18px;
+    color:rgb(185, 34, 41);
+    text-transform: uppercase;
+    line-height: 1.7;
+    font-weight: 500;
+}
+.top_text h2{
+  text-align: center;
+    font-size: 28px;
+    width: 350px;
+    font-weight: 700px;
+}
+
+.main_bottom{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    padding-top: 45px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+.bottom__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bottom__content img{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+.bottom__content p{
+    padding-top: 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 700;
+}

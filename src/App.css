@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  
+:focus, :active {
+    outline: none;
   }
+  
+a:focus, a:active {
+    outline: none;
+  }
+  
+nav, footer, header, aside {
+    display: block;
+  }
+  
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+input, button, textarea {
+    font-family: inherit;
+  }
+  
+input::-ms-clear {
+    display: none;
+  }
+  
+button {
+    cursor: pointer;
+  }
+  
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+a, a:visited {
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: none;
+  }
+  
+ul li {
+    list-style: none;
+  }
+  
+img {
+    vertical-align: top;
+  }
+  
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+body{
+  overflow-x: hidden;
+}
+.banner {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background: url("https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fbanner.png?alt=media&token=7e244d84-8821-477d-b273-4c9381a474fb")
+      no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+.deliveryPic {
+    position: absolute;
+    right: -60px;
+    bottom: -10px;
+    width: 240px;
+}
+
+.bannerContent {
+
+    padding: 8px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+.bannerContent h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2a2b2c;
+}
+.bannerContent p {
+  font-size: 24px;
+  width: 600px;
+  color: #989594;
+  margin: 20px 0;
+  }
+.bannerContent a {
+  margin-top: 12px;
+  background: red;
+  padding: 10px 25px;
+  border-radius: 100vw;
+  color: #faf9fb;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all linear 0.2s;
+}
+.bannerContent a:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.5;
+    transform: scale(1.1);
 }

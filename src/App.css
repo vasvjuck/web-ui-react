@@ -1,128 +1,103 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-:focus, :active {
-    outline: none;
-  }
-  
-a:focus, a:active {
-    outline: none;
-  }
-  
-nav, footer, header, aside {
-    display: block;
-  }
-  
-html, body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-input, button, textarea {
-    font-family: inherit;
-  }
-  
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
 input::-ms-clear {
-    display: none;
-  }
-  
+  display: none;
+}
+
 button {
-    cursor: pointer;
-  }
-  
+  cursor: pointer;
+}
+
 button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-  
-a, a:visited {
-    text-decoration: none;
-  }
-  
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
 a:hover {
-    text-decoration: none;
-  }
-  
+  text-decoration: none;
+}
+
 ul li {
-    list-style: none;
-  }
-  
+  list-style: none;
+}
+
 img {
-    vertical-align: top;
-  }
-  
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: 400;
-  }
-body{
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
   overflow-x: hidden;
 }
-.banner {
-    width: 100%;
-    height: 240px;
-    border-radius: 10px;
-    background: url("https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fbanner.png?alt=media&token=7e244d84-8821-477d-b273-4c9381a474fb")
-      no-repeat center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-}
-.deliveryPic {
-    position: absolute;
-    right: -60px;
-    bottom: -10px;
-    width: 240px;
-}
 
-.bannerContent {
-
-    padding: 8px;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-.bannerContent h3 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #2a2b2c;
-}
-.bannerContent p {
-  font-size: 24px;
-  width: 600px;
-  color: #989594;
-  margin: 20px 0;
-  }
-.bannerContent a {
-  margin-top: 12px;
-  background: red;
-  padding: 10px 35px;
-  border-radius: 100vw;
-  color: #faf9fb;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all linear 0.2s;
-}
-.bannerContent a:hover {
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-    transition: 0.5;
-    transform: scale(1.1);
+.App{
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 0 40px;
 }

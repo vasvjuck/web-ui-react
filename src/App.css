@@ -113,10 +113,10 @@ body{
 .bannerContent a {
   margin-top: 12px;
   background: red;
-  padding: 10px 25px;
+  padding: 10px 35px;
   border-radius: 100vw;
   color: #faf9fb;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   transition: all linear 0.2s;

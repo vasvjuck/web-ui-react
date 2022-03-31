@@ -22,21 +22,32 @@ const MainSection = () => {
                 <SquareIcon classname="two" />
             </div>
             <div className="main_bottom">
-                <div className="bottom">
-                    <div className="bottom__content">
-                        <img src={img1} alt="" />
-                        <p>Easy To Order</p>
+                <div className="bottom_content">
+                    <img src='https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fburger3.png?alt=media&token=0ebe8311-6378-411b-9b6e-d7a6d2a106a2' />
+                    <div className="bottom_text">
+                        <p>Burger</p>
+                        <p><span>$</span>75.3</p>
+                        <button href="">Order now</button>
                     </div>
-                    <div className="bottom__content">
-                        <img src={img2} alt="" />
-                        <p>Fastest Delivery</p>
+                </div>
+                <div className="bottom_content">
+                    <img src='https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fpizza6.png?alt=media&token=72a1e335-68d0-4b1c-8bbd-f28c656ce3b5' />
+                    <div className="bottom_text">
+                        <p>Pizza</p>
+                        <p><span>$</span>75.3</p>
+                        <button href="">Order now</button>
                     </div>
-                    <div className="bottom__content">
-                        <img src={img1} alt="" />
-                        <p>Best Quality</p>
+                </div>
+                <div className="bottom_content">
+                    <img src='https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Ftaco1.png?alt=media&token=b78c8e68-c1a6-4e43-8c43-6ef9f23aa59f' />
+                    <div className="bottom_text">
+                        <p>Tacco</p>
+                        <p><span>$</span>75.3</p>
+                        <button href="">Order now</button>
                     </div>
                 </div>
             </div>
+            <button className='btn'>View More...</button>
         </main>
     )
 }

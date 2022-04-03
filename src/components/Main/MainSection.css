@@ -1,4 +1,4 @@
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,70 +6,79 @@ main{
     padding-top: 45px;
     width: 100%;
 }
-.main_top{
+
+.main_top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 700px;
 }
-.MuiSvgIcon-root:nth-child(1){
+
+.MuiSvgIcon-root:nth-child(1) {
     color: red;
 }
-.MuiSvgIcon-root{
- transform: rotate(45deg);
+
+.MuiSvgIcon-root {
+    transform: rotate(45deg);
 }
-.top_text{
+
+.top_text {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.top_text h3{
+
+.top_text h3 {
     font-size: 18px;
-    color:rgb(185, 34, 41);
+    color: rgb(185, 34, 41);
     text-transform: uppercase;
     line-height: 1.7;
     font-weight: 500;
 }
-.top_text h2{
-  text-align: center;
+
+.top_text h2 {
+    text-align: center;
     font-size: 28px;
     width: 350px;
     font-weight: 700px;
 }
 
-.main_bottom{
+.main_bottom {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     width: 100%;
     padding-top: 105px;
 }
-.bottom_content{
+
+.bottom_content {
     display: flex;
     margin: 20px;
     justify-content: space-between;
     flex-direction: column;
     background-color: rgb(247, 250, 66);
-    width: 400px;
+    width: 380px;
     max-height: 380px;
     border-radius: 24px;
 }
 
-.bottom_content img{
+.bottom_content img {
     position: relative;
     /* bottom: 25%; */
     left: 5%;
     z-index: 10;
     max-width: 100%;
-    max-height: 240px;
+    max-height: 210px;
 }
-.bottom_text{
+
+.bottom_text {
     z-index: 10;
     padding: 0 25px 25px;
 }
-.bottom_text p{
+
+.bottom_text p {
     font-size: 18px;
     color: #000;
     text-transform: uppercase;
@@ -77,11 +86,13 @@ main{
     margin: 2px;
     padding-bottom: 10px;
 }
-.bottom_text span{
+
+.bottom_text span {
     color: red;
     font-size: 16px;
 }
-.bottom_text button{
+
+.bottom_text button {
     background-color: red;
     padding: 10px 35px;
     color: #fff;
@@ -91,12 +102,14 @@ main{
     transition: all linear 0.2s;
     margin-bottom: 15px;
 }
-.bottom_text button:hover{
+
+.bottom_text button:hover {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     transition: 0.5;
     transform: scale(1.1);
 }
-.btn{
+
+.btn {
     margin: 35px 0px;
     background-color: black;
     padding: 10px 35px;
@@ -106,10 +119,19 @@ main{
     border-radius: 24px;
     transition: all linear 0.2s;
 }
-.btn:hover{
+
+.btn:hover {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     transition: 0.5;
     transform: scale(1.1);
     background-color: #8e8e8e;
     color: #000;
+}
+
+.allGoods {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    margin-left: 15px;
+    cursor: pointer;
 }

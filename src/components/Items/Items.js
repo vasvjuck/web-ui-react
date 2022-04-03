@@ -1,13 +1,13 @@
 import React from 'react'
 import '../Main/MainSection.css';
 
-const Items = ({ img, name, price }) => {
+const Items = ({ data }) => {
     return (
-        <div className="bottom_content">
-            <img src={img} alt='pizza' />
+        <div key={data.id} className="bottom_content">
+            <img src={data.imgSrc} alt='pizza' />
             <div className="bottom_text">
-                <p>{name}</p>
-                <p><span>$</span>{price}</p>
+                <p>{data.name}</p>
+                <p><span>$</span>75.4</p>
                 <button href="">Order now</button>
             </div>
         </div>

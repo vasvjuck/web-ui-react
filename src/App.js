@@ -1,17 +1,21 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Banner from './components/Banner/Banner';
-import MainSection from './components/Main/MainSection';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from './components/Pages/HomePage';
+import CatalogPage from './components/Pages/CatalogPage';
+import CartPage from './components/Pages/CartPage';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Banner />
-      <MainSection />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

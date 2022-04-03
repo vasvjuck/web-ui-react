@@ -53,17 +53,6 @@ main {
     padding-top: 105px;
 }
 
-.bottom_content {
-    display: flex;
-    margin: 20px;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: rgb(247, 250, 66);
-    width: 380px;
-    max-height: 380px;
-    border-radius: 24px;
-}
-
 .bottom_content img {
     position: relative;
     /* bottom: 25%; */
@@ -109,6 +98,19 @@ main {
     transform: scale(1.1);
 }
 
+.bottom_content {
+    display: flex;
+    width: 370px;
+
+    margin: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(247, 250, 66);
+    max-height: 350px;
+    border-radius: 24px;
+}
+
+
 .btn {
     margin: 35px 0px;
     background-color: black;
@@ -134,4 +136,5 @@ main {
     margin-right: 15px;
     margin-left: 15px;
     cursor: pointer;
+
 }

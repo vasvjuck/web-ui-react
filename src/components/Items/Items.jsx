@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Main/MainSection.css';
+import './Items.css';
 
 const Items = ({ data }) => {
     return (

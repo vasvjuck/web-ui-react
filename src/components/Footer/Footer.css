@@ -23,13 +23,21 @@
     font-weight: 500;
 }
 
+.food__stuff-inner{
+display: flex;
+justify-content: space-between;
+}
 .footer__stuff div {
     line-height: 1.2rem;
     padding-top: 5px;
     padding-right: 5px;
 }
+.footer__branding-stuff a:hover{
+    cursor: pointer;
+
+}
 .footer__logo {
-    margin: 0 80px;
+    margin: 0 40px;
 }
 .footer__item-social {
     display: flex;
@@ -44,7 +52,6 @@
 }
 
 .footer__item-social img:hover {
-    box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
     transform: scale(1.1)
 }
 
@@ -53,5 +60,4 @@
     padding: 20px 0;
     border-top: 1px solid #000;
     text-align: center;
-
 }

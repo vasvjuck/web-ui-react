@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className='header'>
             <div className="header__logo">
-                <img className='logo' src='https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Flogo.png?alt=media&token=fc228623-ef27-4af4-8ea5-b9ebeeaf47dc' alt='logo' />
+                <img className='logo' src='https://pngimg.com/uploads/barbecue/barbecue_PNG8.png' alt='logo' />
             </div>
             <nav className='header__list'>
                 <Link to="/"><span>Home</span></Link>

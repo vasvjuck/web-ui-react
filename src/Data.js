@@ -5,7 +5,7 @@ const MenuItems = [
         name: "Burger",
         price: "3.59",
         imgSrc:
-            "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fburger3.png?alt=media&token=0ebe8311-6378-411b-9b6e-d7a6d2a106a2",
+            "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png",
     },
     {
         id: 2,
@@ -13,15 +13,15 @@ const MenuItems = [
         name: "Pizza",
         price: "9.50",
         imgSrc:
-            "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fpizza6.png?alt=media&token=72a1e335-68d0-4b1c-8bbd-f28c656ce3b5",
+            "https://pngimg.com/uploads/pizza/pizza_PNG43990.png",
     },
     {
         id: 3,
-        itemId: "taco01",
-        name: "Tacco",
+        itemId: "croissant01",
+        name: "Croissant",
         price: "7.35",
         imgSrc:
-            "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Ftaco1.png?alt=media&token=b78c8e68-c1a6-4e43-8c43-6ef9f23aa59f",
+            "https://pngimg.com/uploads/croissant/croissant_PNG46721.png",
     },
     {
         id: 4,

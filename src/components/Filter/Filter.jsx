@@ -1,16 +1,19 @@
 import React from 'react'
 
-const Filter = ({data, defaultValue}) => {
-  return (
-    <select>
-        <option disabled value="">{defaultValue}</option>
-        {data.map(options=>
-            <option value={options.value}>
-                {data.name}
-            </option>
+const Filter = ({ options, defaultValue, value, onChange }) => {
+    return (
+        <select
+            value={value}
+            onChange={event => onChange(event.target.value)}
+        >
+            <option disabled value="">{defaultValue}</option>
+            {options.map(option =>
+                <option key={option.value} value={option.value}>
+                    {option.name}
+                </option>
             )}
-    </select>
-  )
+        </select>
+    )
 }
 
 export default Filter

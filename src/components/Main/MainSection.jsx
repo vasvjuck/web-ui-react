@@ -20,7 +20,7 @@ const MainSection = () => {
     return (
         <main>
             <div className="main_top">
-                <SquareIcon classname="one" />
+                <SquareIcon className="one" />
                 <div className="top_text">
                     <h3 className="top__subtitle">
                         What We Serve
@@ -29,19 +29,19 @@ const MainSection = () => {
                         Your Favourite Food Delivery Partner
                     </h2>
                 </div>
-                <SquareIcon classname="two" />
+                <SquareIcon className="two" />
             </div>
             <div className="main_bottom">
                 {
                     data && data.map((data) => (
-                        <Items data={data} />
+                        <Items data={data} key={data.id}/>
                     ))
                 }
             </div>
             {
                 !dataAll ?
                     (<button className='btn' onClick={addProduct}>View More...</button>) :
-                    (<div><SquareIcon classname="one" /><span className="allGoods">It's all goods</span><SquareIcon classname="two" /></div>)
+                    (<div><SquareIcon className="one" /><span className="allGoods">It's all goods</span><SquareIcon className="two" /></div>)
             }
         </main>
     )

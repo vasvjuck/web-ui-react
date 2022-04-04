@@ -4,10 +4,10 @@ import './Items.css';
 const Items = ({ data }) => {
     return (
         <div key={data.id} className="bottom_content">
-            <img src={data.imgSrc} alt='pizza' />
+            <img src={data.imgSrc} alt={data.itemId} />
             <div className="bottom_text">
                 <p>{data.name}</p>
-                <p><span>$</span>75.4</p>
+                <p><span>$</span>{data.price}</p>
                 <button href="">Order now</button>
             </div>
         </div>

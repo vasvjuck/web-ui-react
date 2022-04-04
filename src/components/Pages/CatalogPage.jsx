@@ -8,9 +8,9 @@ const CatalogPage = () => {
     return (
         <div>
             <Header />
-         
+
             <CatalogMainSection />
-          
+
             <Footer />
         </div>
     )

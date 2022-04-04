@@ -6,40 +6,37 @@ import Filter from '../Filter/Filter'
 import { MenuItems } from '../../Data'
 
 const CatalogMainSection = () => {
-    const [data, setDataFilter] = useState([])
+    const [data, setData] = useState(MenuItems)
 
     return (
-
-        
-        <section className="item__filter">
-            <div className="searchBox">
-                <input className="searchInput" type="text" placeholder="Search" />
-                <button className="searchButton" href="#">
-                    <SearchIcon />
-                </button>
-            </div>
-            {/* <form>
-                <div className="filter">
-                    <Filter
-                        defaultValue="Filter by:"
-                        options={[
-                            { value: { data.name }, name: 'By name' }
-                        ]}
-
-                    />
-
-
-
-                    <select name="" id="">
-                        <option value="value0">Filter 1</option>
-                        <option value="value1">By name</option>
-                        <option value="value2">By price</option>
-                        <option value="value3">By id</option>
-                    </select>
+        <div>
+            <section className="item__filter">
+                <div className="searchBox">
+                    <input className="searchInput" type="text" placeholder="Search" />
+                    <button className="searchButton" href="#">
+                        <SearchIcon />
+                    </button>
                 </div>
+                <form>
+                    <div className="filter">
+                        <Filter
+                            defaultValue="Filter by:"
+                            data={data}
+                        // options={[
+                        //     { value: data, name: 'By name' }
+                        // ]}
+                        />
+                        <select name="" id="">
+                            <option value="value0">Filter 1</option>
+                            <option value="value1">By name</option>
+                            <option value="value2">By price</option>
+                            <option value="value3">By id</option>
+                        </select>
+                    </div>
 
-            </form> */}
+                </form>
 
+            </section>
             <div className="main_bottom">
                 {
                     data.map((data) => (
@@ -47,7 +44,7 @@ const CatalogMainSection = () => {
                     ))
                 }
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -1,5 +1,29 @@
 const MenuItems = [
     {
+        id: 1,
+        itemId: "buger01",
+        name: "Burger",
+        price: "3.59",
+        imgSrc:
+            "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png",
+    },
+    {
+        id: 2,
+        itemId: "pizza01",
+        name: "Pizza",
+        price: "9.50",
+        imgSrc:
+            "https://pngimg.com/uploads/pizza/pizza_PNG43990.png",
+    },
+    {
+        id: 3,
+        itemId: "croissant01",
+        name: "Croissant",
+        price: "7.35",
+        imgSrc:
+            "https://pngimg.com/uploads/croissant/croissant_PNG46721.png",
+    },
+    {
         id: 4,
         itemId: "Potatochips01",
         name: "Potato chips",

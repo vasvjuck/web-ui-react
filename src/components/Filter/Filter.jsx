@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from 'react'
+import './Filter.css';
 
-const Filter = ({ data, defaultValue }) => {
-  const [optionValue, setOptionValue] = useState("Filter by name:")
-  console.log(data)
-
-  const handleChange = (e) => {
-    setOptionValue(e.target.value)
-    console.log(optionValue)
-  }
-
+const Filter = ({ options, defaultValue, value, onChange }) => {
   return (
-    <select onChange={handleChange} value={optionValue}>
-      <option>Filter by name:</option>
-      {
-        data.map((options) => (
-          <option value={options.name}>
-            {options.name}
-          </option>
-        ))
-      }
-
+    <select className='filter'
+      value={value}
+      onChange={event => onChange(event.target.value)}
+    >
+      <option disabled value="">{defaultValue}</option>
+      {options.map(option =>
+        <option key={option.value} value={option.value}>
+          {option.name}
+        </option>
+      )}
     </select>
   )
 }
 
-export default Filter
+export default Filter;

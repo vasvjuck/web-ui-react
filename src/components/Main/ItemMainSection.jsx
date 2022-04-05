@@ -6,7 +6,7 @@ import { MenuItems } from '../../Data'
 
 const ItemMainSection = () => {
     const { detailId } = useParams()
-    const [data, setData] = useState()
+    const [data, setData] = useState({})
 
     const findEl = () => {
         const element = MenuItems.find(el => detailId == el.id)
@@ -21,11 +21,11 @@ const ItemMainSection = () => {
     return (
         <section className="ItemMainSection">
             <section className='item__description'>
-                <img src="https://pngimg.com/uploads/pizza/pizza_PNG43990.png" alt="" />
+                <img src={data.imgSrc} alt="" />
                 <div>
                     <PrimaryButton text="1 characteristic" />
                     <PrimaryButton text="2 characteristic" />
-                    <h1>Burger</h1>
+                    <h1>{data.name}</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Praesentium dignissimos sequi itaque minima nihil adipisci repellat,
                         repudiandae alias fugit recusandae magni a, cum exercitationem debitis
@@ -35,10 +35,10 @@ const ItemMainSection = () => {
             </section>
             <section className="add-to-cart">
                 <p>
-                    Price:<span> $</span>75.2
+                    Price:<span> $</span>{data.price}
                 </p>
                 <div>
-                    <Link className="button" to="/catalog"><PrimaryButton  text="Go back" /></Link>
+                    <Link className="button" to="/catalog"><PrimaryButton text="Go back" /></Link>
                     <PrimaryButton text="Add to cart" />
                 </div>
             </section>

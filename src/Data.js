@@ -59,7 +59,7 @@ const MenuItems = [
         id: 8,
         itemId: "Friedchicken01",
         name: "Fried chicken",
-        price: "12.50",
+        price: "4.50",
         imgSrc:
             "https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG14101.png",
     },

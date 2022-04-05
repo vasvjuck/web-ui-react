@@ -4,43 +4,70 @@ import './CatalogMainSection.css'
 import Items from '../Items/Items';
 import SearchIcon from '@mui/icons-material/Search';
 import Filter from '../Filter/Filter'
+import PrimaryButton from '../PrimaryButton';
 import { MenuItems } from '../../Data'
 
 const CatalogMainSection = () => {
     const [data, setDataFilter] = useState(MenuItems)
     const [selectedSort, setSelectedSort] = useState('')
+    const [searchQuery, setSearchQuery] = useState('')
 
     const sortData = (sort) => {
-        setSelectedSort(sort)
+        setSelectedSort(sort);
+        setDataFilter([...data].sort((a, b) => a[sort].localeCompare(b[sort])))
         console.log(sort)
     }
 
+
+
     return (
-
-
         <section className="item__filter">
-            <div className="searchBox">
-                <input className="searchInput" type="text" placeholder="Search" />
-                <button className="searchButton" href="#">
-                    <SearchIcon />
-                </button>
-            </div>
-            <form>
-                <div className="filter">
-                    <Filter
-                        value={selectedSort}
-                        onChange={sortData}
-                        defaultValue="Filter by:"
-                        options={[
-                            { value: 'name', name: 'By name' },
-                            { value: 'price', name: 'By price' },
-                            { value: 'id', name: 'By id'}
-                        ]}
-
-                    />
+            <div className='topbox'>
+                <div className="searchBox">
+                    <input
+                        className="searchInput"
+                        type="text"
+                        placeholder="Search..." />
+                    <button className="searchButton" href="#">
+                        <SearchIcon />
+                    </button>
                 </div>
-
-            </form>
+                <form>
+                    <div className="filter">
+                        <Filter
+                            value={selectedSort}
+                            onChange={sortData}
+                            defaultValue="Filter by:"
+                            options={[
+                                { value: 'name', name: 'By name' },
+                                { value: 'price', name: 'By price' },
+                                { value: 'id', name: 'By id' }
+                            ]}
+                        />
+                        <Filter
+                            value={selectedSort}
+                            onChange={sortData}
+                            defaultValue="Filter by:"
+                            options={[
+                                { value: 'name', name: 'By name' },
+                                { value: 'price', name: 'By price' },
+                                { value: 'id', name: 'By id' }
+                            ]}
+                        />
+                        <Filter
+                            value={selectedSort}
+                            onChange={sortData}
+                            defaultValue="Filter by:"
+                            options={[
+                                { value: 'name', name: 'By name' },
+                                { value: 'price', name: 'By price' },
+                                { value: 'id', name: 'By id' }
+                            ]}
+                        />
+                    </div>
+                    <PrimaryButton text="Apply" />
+                </form>
+            </div>
 
             <div className="main_bottom">
                 {

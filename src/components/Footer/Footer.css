@@ -1,6 +1,7 @@
 .footer {
     position: sticky;
     top: 100vh;
+    margin-top: 60px;
 }
 
 .footer__items {

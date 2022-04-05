@@ -1,4 +1,5 @@
 import React from 'react'
+import PrimaryButton from '../PrimaryButton';
 import './Items.css';
 
 const Items = ({ data }) => {
@@ -8,7 +9,7 @@ const Items = ({ data }) => {
             <div className="bottom_text">
                 <p>{data.name}</p>
                 <p><span>$</span>{data.price}</p>
-                <button href="">Order now</button>
+                <PrimaryButton text="Order" />
             </div>
         </div>
     )

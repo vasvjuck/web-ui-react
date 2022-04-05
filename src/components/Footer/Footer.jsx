@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css';
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -18,18 +19,13 @@ const Footer = () => {
                                     </p>
 
                                 </div>
-                                {/* <ul className="footer__branding-stuff">
-                                        <li><a href="#">Burger</a></li>
-                                        <li><a href="#">Pizza</a></li>
-                                        <li><a href="#">Tacco</a></li>
-                                    </ul> */}
                             </div>
                         </div>
                         <ul className="footer__item-social">
-                            <li><a><img src="https://img.icons8.com/color/48/000000/facebook-circled--v5.png" alt="Facebook" /></a></li>
-                            <li><a><img src="https://img.icons8.com/color/48/000000/twitter-circled--v5.png" alt="Twitter" /></a></li>
-                            <li><a><img src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png" alt="Linkedin" /></a></li>
-                            <li><a><img src="https://img.icons8.com/color/48/000000/google-plus--v1.png" alt="GooglePlus" /></a></li>
+                            <li><Link to="/#Facebook"><img src="https://img.icons8.com/color/48/000000/facebook-circled--v5.png" alt="Facebook" /></Link></li>
+                            <li><Link to="/#Twitter"><img src="https://img.icons8.com/color/48/000000/twitter-circled--v5.png" alt="Twitter" /></Link></li>
+                            <li><Link to="/#Linkedin"><img src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png" alt="Linkedin" /></Link></li>
+                            <li><Link to="/#GooglePlus"><img src="https://img.icons8.com/color/48/000000/google-plus--v1.png" alt="GooglePlus" /></Link></li>
                         </ul >
                     </div >
                     <div className="footer__item-copy">

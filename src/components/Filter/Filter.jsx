@@ -1,8 +1,9 @@
 import React from 'react'
+import './Filter.css';
 
 const Filter = ({ options, defaultValue, value, onChange }) => {
     return (
-        <select
+        <select className='filter'
             value={value}
             onChange={event => onChange(event.target.value)}
         >
@@ -16,4 +17,4 @@ const Filter = ({ options, defaultValue, value, onChange }) => {
     )
 }
 
-export default Filter
+export default Filter;

@@ -58,7 +58,7 @@ main {
     /* bottom: 25%; */
     left: 5%;
     z-index: 10;
-    max-width: 100%;
+    width: 90%;
     max-height: 210px;
 }
 
@@ -100,12 +100,11 @@ main {
 
 .bottom_content {
     display: flex;
-    width: 370px;
-
     margin: 20px;
     justify-content: space-between;
     flex-direction: column;
     background-color: rgb(247, 250, 66);
+    width: 380px;
     max-height: 350px;
     border-radius: 24px;
 }

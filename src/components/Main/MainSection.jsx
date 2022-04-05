@@ -3,6 +3,7 @@ import './MainSection.css';
 import SquareIcon from '@mui/icons-material/Square';
 import Items from '../Items/Items';
 import { MenuItems } from '../../Data'
+import { Link } from 'react-router-dom'
 
 const MainSection = () => {
     const [data, setData] = useState([])
@@ -34,7 +35,9 @@ const MainSection = () => {
             <div className="main_bottom">
                 {
                     data && data.map((data) => (
-                        <Items data={data} key={data.id}/>
+                        <Link to={`/catalog/detail/${data.id}`}>
+                            <Items data={data} key={data.id} />
+                        </Link>
                     ))
                 }
             </div>

@@ -71,6 +71,7 @@ const CatalogMainSection = () => {
 
             <div className="main_bottom">
                 {
+
                     data.map((data) => (
                         <Items data={data} key={data.id} />
                     ))

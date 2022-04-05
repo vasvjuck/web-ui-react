@@ -1,0 +1,99 @@
+.item__description {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 60px 0;
+}
+
+.item__description img  {
+    width: 50%;
+    height: 100%;
+    margin-top: 65px;
+    margin-right: 50px;
+}
+
+.item__description button {
+    margin: 25px 25px 0px 0;
+    background-color: black;
+    padding: 10px 35px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+    transition: all linear 0.2s;
+}
+
+.item__description button:hover {
+    box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
+    transition: 0.5;
+    transform: scale(1.1);
+}
+
+.item__description h1 {
+    text-align: left;
+    font-size: 30px;
+    line-height: 100px;
+    font-weight: 600;
+}
+
+.item__description p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.add-to-cart{
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+    
+    padding: 20px;
+}
+
+.add-to-cart p, .add-to-cart span{
+    font-size: 25px;
+    font-weight: normal;
+}
+.add-to-cart div{
+    display: flex;
+}
+.add-to-cart .button button{
+    margin: 25px 25px 0px 0;
+    background-color: white;
+    padding: 10px 35px;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+    border: 1px solid black;
+    transition: all linear 0.2s;
+}
+.add-to-cart .button~ button{
+    margin: 25px 25px 0px 0;
+    background-color: black;
+    padding: 10px 35px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+    transition: all linear 0.2s;
+}
+
+
+.add-to-cart .button~ button:hover{
+    box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
+    transition: 0.5;
+    transform: scale(1.1);
+}
+.add-to-cart .button button:hover {
+    box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
+    transition: 0.5;
+    transform: scale(1.15);
+    background-color: black;
+    color: #fff;
+}
+
+.add-to-cart .button:hover + button{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}

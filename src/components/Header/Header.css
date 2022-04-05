@@ -62,3 +62,8 @@ span:hover::after {
     transform: scale(1);
     opacity: 1;
 }
+
+.active span::after {
+    transform: scale(1);
+    opacity: 1;
+}

@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from '../Header/Header'
+import ItemMainSection from '../Main/ItemMainSection'
 import Footer from '../Footer/Footer'
-import CatalogMainSection from '../Main/CatalogMainSection'
 
 
-const CatalogPage = () => {
+
+const ItemPage = () => {
     return (
         <div>
             <Header />
-            <CatalogMainSection />
+            <ItemMainSection />
             <Footer />
         </div>
     )
 }
 
-export default CatalogPage
+export default ItemPage

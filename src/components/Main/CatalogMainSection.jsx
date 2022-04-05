@@ -18,8 +18,6 @@ const CatalogMainSection = () => {
         console.log(sort)
     }
 
-
-
     return (
         <section className="item__filter">
             <div className='topbox'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MainSection.css';
 import './CatalogMainSection.css'
 import Items from '../Items/Items';
@@ -8,15 +8,27 @@ import PrimaryButton from '../PrimaryButton';
 import { MenuItems } from '../../Data'
 
 const CatalogMainSection = () => {
-    const [data, setDataFilter] = useState(MenuItems)
+    const [data, setData] = useState(MenuItems)
     const [selectedSort, setSelectedSort] = useState('')
     const [searchQuery, setSearchQuery] = useState('')
+    const [search, setSearch] = useState('');
 
     const sortData = (sort) => {
         setSelectedSort(sort);
-        setDataFilter([...data].sort((a, b) => a[sort].localeCompare(b[sort])))
+        setData([...data].sort((a, b) => a[sort].localeCompare(b[sort])))
         console.log(sort)
     }
+
+    const searchEl = () => {
+        const element = MenuItems.filter(el => search === el.name)
+        setData(element)
+    }
+
+    useEffect(() => {
+        if (search === '') {
+            setData(MenuItems)
+        }
+    }, [search])
 
     return (
         <section className="item__filter">
@@ -25,9 +37,12 @@ const CatalogMainSection = () => {
                     <input
                         className="searchInput"
                         type="text"
-                        placeholder="Search..." />
+                        placeholder="Search..."
+                        onChange={e => setSearch(e.target.value)}
+                        value={search}
+                    />
                     <button className="searchButton" href="#">
-                        <SearchIcon />
+                        <SearchIcon onClick={searchEl} />
                     </button>
                 </div>
                 <form>

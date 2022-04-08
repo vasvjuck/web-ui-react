@@ -1,9 +1,12 @@
 const MenuItems = [
     {
         id: 1,
-        itemId: "buger01",
+        itemId: "burger01",
         name: "Burger",
         price: "3.59",
+        type: "burger",
+        vegan: false,
+        cheese: true,
         imgSrc:
             "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png",
     },
@@ -12,6 +15,9 @@ const MenuItems = [
         itemId: "pizza01",
         name: "Pizza",
         price: "9.50",
+        type: "pizza",
+        vegan: false,
+        cheese: true,
         imgSrc:
             "https://pngimg.com/uploads/pizza/pizza_PNG43990.png",
     },
@@ -20,6 +26,9 @@ const MenuItems = [
         itemId: "croissant01",
         name: "Croissant",
         price: "7.35",
+        type: "sandwich",
+        vegan: false,
+        cheese: true,
         imgSrc:
             "https://pngimg.com/uploads/croissant/croissant_PNG46721.png",
     },
@@ -28,6 +37,9 @@ const MenuItems = [
         itemId: "Potatochips01",
         name: "Potato chips",
         price: "3.50",
+        type: "fried",
+        vegan: true,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/potato_chips/potato_chips_PNG64.png",
     },
@@ -36,6 +48,9 @@ const MenuItems = [
         itemId: "Hotdog01",
         name: "Hot dog",
         price: "2.99",
+        type: "burger",
+        vegan: false,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/hot_dog/hot_dog_PNG10207.png",
     },
@@ -44,6 +59,9 @@ const MenuItems = [
         itemId: "Doubleburger01",
         name: "Double burger",
         price: "8.50",
+        type: "burger",
+        vegan: false,
+        cheese: true,
         imgSrc:
             "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96783.png",
     },
@@ -52,6 +70,9 @@ const MenuItems = [
         itemId: "Cheeseburger01",
         name: "Cheese burger",
         price: "3.99",
+        type: "burger",
+        vegan: true,
+        cheese: true,
         imgSrc:
             "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96781.png",
     },
@@ -60,6 +81,9 @@ const MenuItems = [
         itemId: "Friedchicken01",
         name: "Fried chicken",
         price: "4.50",
+        type: "fried",
+        vegan: true,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG14101.png",
     },
@@ -68,6 +92,9 @@ const MenuItems = [
         itemId: "Sandwich01",
         name: "Sandwich",
         price: "3.99",
+        type: "sandwich",
+        vegan: true,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/sandwich/sandwich_PNG19.png",
     },
@@ -76,6 +103,9 @@ const MenuItems = [
         itemId: "Kebab01",
         name: "Kebab",
         price: "7.99",
+        type: "fried",
+        vegan: false,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/kebab/kebab_PNG53.png",
     },
@@ -84,6 +114,9 @@ const MenuItems = [
         itemId: "Fries01",
         name: "Fries",
         price: "4.50",
+        type: "fried",
+        vegan: true,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/fries/fries_PNG43.png",
     },
@@ -92,6 +125,9 @@ const MenuItems = [
         itemId: "Sauce01",
         name: "Sauce",
         price: "1.39",
+        type: "sauce",
+        vegan: true,
+        cheese: false,
         imgSrc:
             "https://pngimg.com/uploads/sauce/sauce_PNG170.png",
     },

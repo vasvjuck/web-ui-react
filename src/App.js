@@ -5,10 +5,6 @@ import CatalogPage from './components/Pages/CatalogPage';
 import CartPage from './components/Pages/CartPage';
 import ItemPage from './components/Pages/ItemPage';
 
-
-
-
-
 function App() {
   return (
     <div className="App">

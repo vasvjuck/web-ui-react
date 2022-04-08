@@ -9,8 +9,8 @@ import { MenuItems } from '../../Data'
 
 const CatalogMainSection = () => {
     const [data, setData] = useState(MenuItems)
+    
     const [selectedSort, setSelectedSort] = useState('')
-    const [searchQuery, setSearchQuery] = useState('')
     const [search, setSearch] = useState('');
 
     const sortData = (sort) => {
@@ -20,7 +20,7 @@ const CatalogMainSection = () => {
     }
 
     const searchEl = () => {
-        const element = MenuItems.filter(el => search === el.name)
+        const element = MenuItems.filter(el => search.trim().toLowerCase() === el.name.toLowerCase())
         setData(element)
     }
 
@@ -45,6 +45,7 @@ const CatalogMainSection = () => {
                         <SearchIcon onClick={searchEl} />
                     </button>
                 </div>
+
                 <form>
                     <div className="filter">
                         <Filter
@@ -53,33 +54,34 @@ const CatalogMainSection = () => {
                             defaultValue="Filter by:"
                             options={[
                                 { value: 'name', name: 'By name' },
-                                { value: 'price', name: 'By price' },
-                                { value: 'id', name: 'By id' }
+                                { value: 'price', name: 'By price' }
+                            ]}
+                        />
+                        {/* <Filter
+                            value={selectedSort}
+                            onChange={sortData}
+                            defaultValue="By type:"
+                            options={[
+                                { value: 'type', name: 'burger' },
+                                { value: 'type', name: 'pizza' },
+                                { value: 'type', name: 'sandwich' },
+                                { value: 'type', name: 'fried' },
+                                { value: 'type', name: 'sauce' },
                             ]}
                         />
                         <Filter
                             value={selectedSort}
                             onChange={sortData}
-                            defaultValue="Filter by:"
+                            defaultValue="Ingredients feature:"
                             options={[
-                                { value: 'name', name: 'By name' },
-                                { value: 'price', name: 'By price' },
-                                { value: 'id', name: 'By id' }
+                                { value: 'vegan', name: 'Vegan' },
+                                { value: 'cheese', name: 'With cheese' },
                             ]}
-                        />
-                        <Filter
-                            value={selectedSort}
-                            onChange={sortData}
-                            defaultValue="Filter by:"
-                            options={[
-                                { value: 'name', name: 'By name' },
-                                { value: 'price', name: 'By price' },
-                                { value: 'id', name: 'By id' }
-                            ]}
-                        />
+                        /> */}
                     </div>
                     <PrimaryButton text="Apply" />
                 </form>
+                
             </div>
 
             <div className="main_bottom">

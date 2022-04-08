@@ -20,7 +20,7 @@ const CatalogMainSection = () => {
     }
 
     const searchEl = () => {
-        const element = MenuItems.filter(el => search.trim().toLowerCase() === el.name.toLowerCase())
+        const element = MenuItems.filter(el => el.name.toLowerCase().includes(search.trim().toLowerCase()))
         setData(element)
     }
 

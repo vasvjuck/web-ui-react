@@ -38,13 +38,13 @@ a {
     font-weight: 600;
 }
 
-span {
+.header span {
     font-size: 13px;
     letter-spacing: 1.42px;
     position: relative;
 }
 
-span:after {
+.header span:after {
     content: '';
     height: 2px;
     background: red;
@@ -58,12 +58,12 @@ span:after {
     transform: scale(0);
 }
 
-span:hover::after {
+.header span:hover::after {
     transform: scale(1);
     opacity: 1;
 }
 
-.active span::after {
+.header .active span::after {
     transform: scale(1);
     opacity: 1;
 }

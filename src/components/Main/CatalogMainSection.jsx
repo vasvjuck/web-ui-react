@@ -39,6 +39,7 @@ const CatalogMainSection = () => {
                         type="text"
                         placeholder="Search..."
                         onChange={e => setSearch(e.target.value)}
+                        onKeyPress={(e) => e.key === 'Enter' && searchEl()}
                         value={search}
                     />
                     <button className="searchButton" href="#">

@@ -6,11 +6,11 @@ import CatalogMainSection from '../Main/CatalogMainSection'
 
 const CatalogPage = () => {
     return (
-        <div>
+        <>
             <Header />
             <CatalogMainSection />
             <Footer />
-        </div>
+        </>
     )
 }
 

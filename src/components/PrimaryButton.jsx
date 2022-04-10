@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PrimaryButton = ({ text, clickFunction }) => {
+const PrimaryButton = ({ children, ...props }) => {
     return (
-        <button type="button" onClick={clickFunction}>{text}</button>
+        <button type="button" {...props} >{children}</button>
     )
 }
 

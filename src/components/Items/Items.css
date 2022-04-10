@@ -37,10 +37,7 @@
     margin: 2px;
     padding-bottom: 10px;
 }
-.bottom_text span{
-    color: red;
-    font-size: 16px;
-}
+
 .bottom_text button{
     background-color: red;
     padding: 10px 35px;

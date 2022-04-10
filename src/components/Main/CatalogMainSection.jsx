@@ -80,7 +80,7 @@ const CatalogMainSection = () => {
                             ]}
                         /> */}
                     </div>
-                    <PrimaryButton text="Apply" />
+                    <PrimaryButton>Apply</PrimaryButton>
                 </form>
                 
             </div>

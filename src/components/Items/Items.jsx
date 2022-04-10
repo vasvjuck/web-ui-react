@@ -11,7 +11,7 @@ const Items = ({ data }) => {
             <div className="bottom_text">
                 <p>{data.name}</p>
                 <p><span>$</span>{data.price}</p>
-                <Link to={`/catalog/detail/${data.id}`}> <PrimaryButton text="Order" /></Link>
+                <Link to={`/catalog/detail/${data.id}`}> <PrimaryButton>Order</PrimaryButton></Link>
             </div>
         </div>
     )

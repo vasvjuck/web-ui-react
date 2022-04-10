@@ -23,8 +23,8 @@ const ItemMainSection = () => {
             <section className='item__description'>
                 <img src={data.imgSrc} alt="" />
                 <div>
-                    <PrimaryButton text="1 characteristic" />
-                    <PrimaryButton text="2 characteristic" />
+                    <PrimaryButton>1 characteristic</PrimaryButton>
+                    <PrimaryButton>2 characteristic</PrimaryButton>
                     <h1>{data.name}</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Praesentium dignissimos sequi itaque minima nihil adipisci repellat,
@@ -38,8 +38,8 @@ const ItemMainSection = () => {
                     Price:<span> $</span>{data.price}
                 </p>
                 <div>
-                    <Link className="button" to="/catalog"><PrimaryButton text="Go back" /></Link>
-                    <PrimaryButton text="Add to cart" />
+                    <Link className="button" to="/catalog"><PrimaryButton>Go back</PrimaryButton></Link>
+                    <PrimaryButton>Add to cart</PrimaryButton>
                 </div>
             </section>
         </section>

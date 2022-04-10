@@ -7,12 +7,12 @@ import Footer from '../Footer/Footer'
 
 const HomePage = () => {
     return (
-        <div>
+        <>
             <Header />
             <Banner />
             <MainSection />
             <Footer />
-        </div>
+        </>
     )
 }
 

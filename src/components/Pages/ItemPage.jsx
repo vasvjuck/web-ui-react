@@ -7,11 +7,11 @@ import Footer from '../Footer/Footer'
 
 const ItemPage = () => {
     return (
-        <div>
+        <>
             <Header />
             <ItemMainSection />
             <Footer />
-        </div>
+        </>
     )
 }
 

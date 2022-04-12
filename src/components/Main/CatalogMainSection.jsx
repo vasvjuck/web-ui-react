@@ -5,28 +5,46 @@ import Items from '../Items/Items';
 import SearchIcon from '@mui/icons-material/Search';
 import Filter from '../Filter/Filter'
 import PrimaryButton from '../PrimaryButton';
-import { MenuItems } from '../../Data'
+// import { MenuItems } from '../../Data'
+import ItemService from '../../API/ItemService.js'
 
 const CatalogMainSection = () => {
-    const [data, setData] = useState(MenuItems)
-    
+    const [data, setData] = useState([])
     const [selectedSort, setSelectedSort] = useState('')
     const [search, setSearch] = useState('');
+    const [isItemLoading, setIsItemLoading] = useState(false);
+
+    async function fetchData() {
+        setIsItemLoading(true)
+        setTimeout(async () => {
+            const items = await ItemService.getAll()
+            setData(items)
+            console.log(items)
+            setIsItemLoading(false)
+        }, 1000)
+    }
 
     const sortData = (sort) => {
-        setSelectedSort(sort);
+        setSelectedSort(sort)
         setData([...data].sort((a, b) => a[sort].localeCompare(b[sort])))
         console.log(sort)
     }
 
     const searchEl = () => {
-        const element = MenuItems.filter(el => el.name.toLowerCase().includes(search.trim().toLowerCase()))
+        const element = data.filter(el => el.name.toLowerCase().includes(search.trim().toLowerCase()))
         setData(element)
     }
 
+    // useEffect(() => {
+    //     if (search === '') {
+    //         setData(MenuItems)
+    //     }
+    // }, [search])
+
     useEffect(() => {
+        console.log('USE EFFECT')
         if (search === '') {
-            setData(MenuItems)
+            fetchData()
         }
     }, [search])
 
@@ -48,6 +66,7 @@ const CatalogMainSection = () => {
                 </div>
 
                 <form>
+                    {/* <button type="button" onClick={fetchData} >GET DATA</button> */}
                     <div className="filter">
                         <Filter
                             value={selectedSort}
@@ -82,17 +101,19 @@ const CatalogMainSection = () => {
                     </div>
                     <PrimaryButton>Apply</PrimaryButton>
                 </form>
-                
-            </div>
 
-            <div className="main_bottom">
-                {
-
-                    data.map((data) => (
-                        <Items data={data} key={data.id} />
-                    ))
-                }
             </div>
+            {isItemLoading
+                ? <h1 style={{fontSize: 20, textAlign: 'center'}}>Loading...</h1>
+                : <div className="main_bottom">
+                    {
+                        data.map((data) => (
+                            <Items data={data} key={data.id} />
+                        ))
+                    }
+                </div>
+            }
+
         </section>
     )
 }

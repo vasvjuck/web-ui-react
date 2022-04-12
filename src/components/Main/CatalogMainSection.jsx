@@ -5,6 +5,7 @@ import Items from '../Items/Items';
 import SearchIcon from '@mui/icons-material/Search';
 import Filter from '../Filter/Filter'
 import PrimaryButton from '../PrimaryButton';
+import Loader from '../Loader/Loader';
 // import { MenuItems } from '../../Data'
 import ItemService from '../../API/ItemService.js'
 
@@ -104,7 +105,7 @@ const CatalogMainSection = () => {
 
             </div>
             {isItemLoading
-                ? <h1 style={{fontSize: 20, textAlign: 'center'}}>Loading...</h1>
+                ? <Loader/>
                 : <div className="main_bottom">
                     {
                         data.map((data) => (

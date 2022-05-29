@@ -12,15 +12,15 @@ import ItemService from '../../API/ItemService.js'
 const CatalogMainSection = () => {
     const [data, setData] = useState([])
     const [selectedSort, setSelectedSort] = useState('')
+    const [selectedFilter, setSelectedFilter] = useState('All types:')
     const [search, setSearch] = useState('');
     const [isItemLoading, setIsItemLoading] = useState(false);
 
-    async function fetchData() {
+  async function fetchData() {
         setIsItemLoading(true)
         setTimeout(async () => {
             const items = await ItemService.getAll()
             setData(items)
-            console.log(items)
             setIsItemLoading(false)
         }, 1000)
     }
@@ -30,6 +30,25 @@ const CatalogMainSection = () => {
         setData([...data].sort((a, b) => a[sort].localeCompare(b[sort])))
         console.log(sort)
     }
+
+    const typeFilter = [...new Set(data.map((val) => val.type))]
+
+    const filterData = (filter) => {
+        setSelectedFilter(filter)
+        if (filter === 'All types:') { 
+            fetchData()
+            // setData(data)
+            console.log(filter)
+        }
+        else {
+            setData([...data].filter((item) => item.type === filter))
+        }
+        
+    }
+    console.log(data)
+    console.log(typeFilter)
+
+   
 
     const searchEl = () => {
         const element = data.filter(el => el.name.toLowerCase().includes(search.trim().toLowerCase()))
@@ -49,6 +68,7 @@ const CatalogMainSection = () => {
         }
     }, [search])
 
+
     return (
         <section className="item__filter">
             <div className='topbox'>
@@ -67,32 +87,34 @@ const CatalogMainSection = () => {
                 </div>
 
                 <form>
-                    {/* <button type="button" onClick={fetchData} >GET DATA</button> */}
                     <div className="filter">
                         <Filter
                             value={selectedSort}
                             onChange={sortData}
-                            defaultValue="Filter by:"
+                            defaultValue="Sort by:"
                             options={[
                                 { value: 'name', name: 'By name' },
                                 { value: 'price', name: 'By price' }
                             ]}
                         />
-                        {/* <Filter
-                            value={selectedSort}
-                            onChange={sortData}
-                            defaultValue="By type:"
-                            options={[
-                                { value: 'type', name: 'burger' },
-                                { value: 'type', name: 'pizza' },
-                                { value: 'type', name: 'sandwich' },
-                                { value: 'type', name: 'fried' },
-                                { value: 'type', name: 'sauce' },
-                            ]}
-                        />
                         <Filter
-                            value={selectedSort}
-                            onChange={sortData}
+                            value={selectedFilter}
+                            onChange={filterData}
+                            defaultValue="All types:"
+                            options={
+                                typeFilter.map((type) => {
+                                    return { value: type, name: type }
+                                })
+                                // [{ value: 'burger', name: 'burger' },
+                                // { value: 'pizza', name: 'pizza' },
+                                // { value: 'sandwich', name: 'sandwich' },
+                                // { value: 'fried', name: 'fried' },
+                                // { value: 'sauce', name: 'sauce' }]
+                            }
+                        />
+                        {/* <Filter
+                            value={selectedFilter}
+                            onChange={filterData}
                             defaultValue="Ingredients feature:"
                             options={[
                                 { value: 'vegan', name: 'Vegan' },
@@ -105,7 +127,7 @@ const CatalogMainSection = () => {
 
             </div>
             {isItemLoading
-                ? <Loader/>
+                ? <Loader />
                 : <div className="main_bottom">
                     {
                         data.map((data) => (

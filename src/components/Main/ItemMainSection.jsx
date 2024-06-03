@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react'
 import PrimaryButton from '../PrimaryButton';
 import { useParams, Link } from 'react-router-dom'
 import './ItemMainSection.css'
-import { MenuItems } from '../../Data'
+import ItemService from '../../API/ItemService';
 
 const ItemMainSection = () => {
     const { detailId } = useParams()
     const [data, setData] = useState({})
 
-    const findEl = () => {
-        const element = MenuItems.find(el => detailId == el.id)
-        setData(element)
+    const findEl = async () => {
+        await ItemService.getAll()
+            .then(res => res.find(el => detailId === el.id.toString()))
+            .then(res => setData(res))
     }
 
     useEffect(() => {
         findEl()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     console.log(data)

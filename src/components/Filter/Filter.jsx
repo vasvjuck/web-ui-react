@@ -1,25 +1,4 @@
-// import React from 'react'
-// import './Filter.css';
-
-// const Filter = ({ options, defaultValue, value, onChange }) => {
-//   return (
-//     <select className='filter'
-//       value={value}
-//       onChange={event => onChange(event.target.value)}
-//     >
-//       <option value={defaultValue}>{defaultValue}</option>
-//       {options.map(option =>
-//         <option key={option.value} value={option.value}>
-//           {option.name}
-//         </option>
-//       )}
-//     </select>
-//   )
-// }
-
-// export default Filter;
-
-import React from 'react';
+import React from 'react'
 import './Filter.css';
 
 const Filter = ({ options, defaultValue, value, onChange }) => {
@@ -28,14 +7,14 @@ const Filter = ({ options, defaultValue, value, onChange }) => {
       value={value}
       onChange={event => onChange(event.target.value)}
     >
-      <option value="">{defaultValue}</option>
+      <option value={defaultValue}>{defaultValue}</option>
       {options.map(option =>
         <option key={option.value} value={option.value}>
           {option.name}
         </option>
       )}
     </select>
-  );
-};
+  )
+}
 
 export default Filter;

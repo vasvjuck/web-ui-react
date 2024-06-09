@@ -12,9 +12,9 @@ const CatalogMainSection = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [selectedSort, setSelectedSort] = useState('');
-    const [selectedTypeFilter, setSelectedTypeFilter] = useState('');
-    const [selectedVeganFilter, setSelectedVeganFilter] = useState('');
-    const [selectedCheeseFilter, setSelectedCheeseFilter] = useState('')
+    const [selectedTypeFilter, setSelectedTypeFilter] = useState('Select types:');
+    const [selectedVeganFilter, setSelectedVeganFilter] = useState('Select vegan types:');
+    const [selectedCheeseFilter, setSelectedCheeseFilter] = useState('Select cheese types:');
     const [search, setSearch] = useState('');
     const [isItemLoading, setIsItemLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -25,7 +25,7 @@ const CatalogMainSection = () => {
 
     useEffect(() => {
         applySearch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
 
     async function fetchData() {
@@ -70,23 +70,45 @@ const CatalogMainSection = () => {
         setFilteredData(filtered);
     };
 
-
     const applyFiltersAndSort = () => {
-        let filtered = data;
 
-        if (selectedTypeFilter !== 'All types' && selectedTypeFilter !== '') {
-            filtered = filtered.filter((item) => item.type === selectedTypeFilter);
-        }
+        let filtered = [...data]; // Create a new array for filters and sorting
 
-        if (selectedVeganFilter !== 'All Omnivorous' && selectedVeganFilter !== '') {
-            filtered = filtered.filter((item) => item.vegan.toString() === selectedVeganFilter);
-        }
+        const filterConfig = {
+            type: (item) => {
+                // Logic for filtering by type
+                return ['Select types:', 'All types', item.type].includes(selectedTypeFilter);
+            },
+            vegan: (item) => {
+                // Logic for filtering by vegan
+                return ['Select vegan types:', 'All Omnivorous', item.vegan.toString()].includes(selectedVeganFilter);
+            },
+            cheese: (item) => {
+                // Logic for filtering by cheese
+                return ['Select cheese types:', 'Any cheese', item.cheese.toString()].includes(selectedCheeseFilter);
+            }
+        };
 
-        if (selectedCheeseFilter !== 'Any cheese' && selectedCheeseFilter !== '') {
-            filtered = filtered.filter((item) => item.cheese.toString() === selectedCheeseFilter);
-        }
+        filtered = filtered.filter((item) => {
+            return Object.keys(filterConfig).every((key) => filterConfig[key](item));
+        });
 
-        if (selectedSort) {
+
+        // // Alternative filtering
+        // if (selectedTypeFilter !== 'All types' && selectedTypeFilter !== 'Select types:') {
+        //     filtered = filtered.filter((item) => item.type === selectedTypeFilter);
+        // }
+
+        // if (selectedVeganFilter !== 'All Omnivorous' && selectedVeganFilter !== 'Select vegan types:') {
+        //     filtered = filtered.filter((item) => item.vegan.toString() === selectedVeganFilter);
+        // }
+
+        // if (selectedCheeseFilter !== 'Any cheese' && selectedCheeseFilter !== 'Select cheese types:') {
+        //     filtered = filtered.filter((item) => item.cheese.toString() === selectedCheeseFilter);
+        // }
+
+        if (selectedSort && selectedSort !== 'Sort by:') {
+            filtered = filtered.slice(); // Create a new array for sorting (for the correct use of mutable array methods)
             filtered.sort((a, b) => {
                 if (selectedSort === 'price') {
                     return a[selectedSort] - b[selectedSort];
@@ -103,6 +125,7 @@ const CatalogMainSection = () => {
             <div className='topbox'>
                 <div className="searchBox">
                     <input
+                        id='search'
                         className="searchInput"
                         type="text"
                         placeholder="Search..."
@@ -138,7 +161,7 @@ const CatalogMainSection = () => {
                             onChange={handleVeganFilterChange}
                             defaultValue="Select vegan types:"
                             options={[
-                                { value: null, name: 'All Omnivorous' },
+                                { value: 'All Omnivorous', name: 'All Omnivorous' },
                                 { value: 'true', name: 'Vegan' },
                                 { value: 'false', name: 'Non-Vegan' }
                             ]}
@@ -148,7 +171,7 @@ const CatalogMainSection = () => {
                             onChange={handleCheeseFilterChange}
                             defaultValue="Select cheese types:"
                             options={[
-                                { value: null, name: 'Any cheese' },
+                                { value: 'Any cheese', name: 'Any cheese' },
                                 { value: 'true', name: 'Cheese' },
                                 { value: 'false', name: 'Non-Cheese' }
                             ]}

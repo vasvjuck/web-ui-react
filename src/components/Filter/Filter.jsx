@@ -3,7 +3,9 @@ import './Filter.css';
 
 const Filter = ({ options, defaultValue, value, onChange }) => {
   return (
-    <select className='filter'
+    <select
+      id={defaultValue}
+      className='filter'
       value={value}
       onChange={event => onChange(event.target.value)}
     >

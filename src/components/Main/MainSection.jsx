@@ -34,9 +34,9 @@ const MainSection = () => {
             </div>
             <div className="main_bottom">
                 {
-                    data && data.map((data) => (
-                        <Link to={`/catalog/detail/${data.id}`}>
-                            <Items data={data} key={data.id} />
+                    data && data.map((dataItem) => (
+                        <Link to={`/catalog/detail/${dataItem.id}`} key={dataItem.id}>
+                            <Items dataItem={dataItem} />
                         </Link>
                     ))
                 }

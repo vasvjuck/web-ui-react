@@ -23,10 +23,10 @@ const CatalogMainSection = () => {
         fetchData();
     }, []);
 
-    useEffect(() => {
-        applySearch();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [search]);
+    // useEffect(() => {
+    //     applySearch();
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [search]);
 
     async function fetchData() {
         setIsItemLoading(true);
@@ -187,7 +187,7 @@ const CatalogMainSection = () => {
             ) : (
                 <div className="main_bottom">
                     {filteredData.map((item) => (
-                        <Items data={item} key={item.id} />
+                        <Items dataItem={item} key={item.id} />
                     ))}
                 </div>
             )}

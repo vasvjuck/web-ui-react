@@ -12,6 +12,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 700px;
+    margin-top: 40px;
 }
 
 .MuiSvgIcon-root:nth-child(1) {
